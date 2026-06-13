@@ -169,11 +169,3 @@ Potential enhancements include:
 * Network Monitoring and Logging
 * Firewall Deployment
 * VPN Connectivity
-
-## License
-
-This project is provided for educational, laboratory, and portfolio purposes.
-
-## Author
-
-Developed as a practical network engineering project focused on enterprise LAN design, VLAN implementation, network segmentation, and Cisco networking technologies.
