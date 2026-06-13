@@ -1,23 +1,179 @@
-# local-area-network-basic
-Bu depo, Cisco Packet Tracer üzerinde simüle edilmiş temel bir Yerel Alan Ağı (LAN) tasarımını içermektedir proje, küçük ve orta ölçekli bir şirket ortamı için güvenli ve yapılandırılmış bir ağ bölümlendirmesini (segmentasyon) göstermektedir
+# Enterprise Local Area Network (LAN) Architecture Simulation
 
-## ağ mimarisi 
+## Description
 
-Topoloji, hiyerarşik bir ağ tasarımı kullanılarak şu bileşenlerle oluşturulmuştur:
-*   **1 x Router (Yönlendirici):** VLAN'lar arası yönlendirmeyi (Inter-VLAN Routing) sağlar ve dış ağ/internet bağlantısını yönetir.
-*   **1 x Core Switch (Omurga Anahtar - Layer 3):** Ağın ana omurgası olarak görev yapar, departmanlar arasındaki yüksek hızlı veri trafiğini yönetir.
-*   **4 x Access Switch (Erişim Anahtarı):** Son kullanıcı cihazlarını ağa bağlamak için her departmana özel olarak atanmış switchler.
+This repository contains a simulated Enterprise Local Area Network (LAN) architecture developed using Cisco Packet Tracer.
 
-## departman bölümlendirmesi (bütün VLAN'lar)
+The project demonstrates the design and implementation of a structured network infrastructure for a small-to-medium-sized business environment. It focuses on network segmentation, VLAN implementation, inter-VLAN communication, and hierarchical network design principles commonly used in enterprise environments.
 
-Ağ güvenliğini ve trafik yönetimi acisindan mantık 4 bölümden olusur
+The primary objective of this project is to showcase practical networking concepts, including traffic isolation, network security, and scalable infrastructure planning.
 
-1.  **IT (Bilgi Teknolojileri):** Ağ yönetimi ve teknik destek cihazları için yüksek yetkilere sahip güvenli bölge.
-2.  **Accounting (Muhasebe):** Finansal veriler ve muhasebe bilgisayarları için izole edilmiş güvenli bölge.
-3.  **Marketing (Pazarlama):** Pazarlama ekipleri ve dışa dönük kurumsal cihazlar için standart bölge.
-4.  **Guest (Misafir):** Şirket ağına erişimi kısıtlanmış, sadece ziyaretçilerin internete çıkması için ayrılmış izole bölge.
+## Technologies
 
-## Projede Uygulanan Özellikler
-*   VLAN (Sanal Yerel Alan Ağı) kullanılarak ağın bölümlendirilmesi.
-*   Router veya Core Switch üzerinde VLAN'lar arası yönlendirme (Inter-VLAN Routing) yapılandırması.
-*   Temel switch ve router konfigürasyonları.
+The following technologies and networking concepts were utilized:
+
+* Cisco Packet Tracer
+* VLAN (Virtual Local Area Network)
+* Inter-VLAN Routing
+* Layer 2 Switching
+* Layer 3 Switching
+* Router Configuration
+* Enterprise Network Design
+* Network Segmentation
+
+## Network Architecture
+
+The topology follows a hierarchical network design model consisting of the following components:
+
+### Router
+
+* Provides inter-VLAN routing functionality
+* Manages connectivity between internal networks
+* Simulates external network and internet access
+
+### Core Switch (Layer 3)
+
+* Functions as the backbone of the network
+* Handles high-speed traffic between departments
+* Supports centralized network management
+
+### Access Switches
+
+* Dedicated access-layer switches for each department
+* Connect end-user devices to the network
+* Support VLAN-based segmentation
+
+### Infrastructure Summary
+
+| Device Type           | Quantity | Purpose                                      |
+| --------------------- | -------- | -------------------------------------------- |
+| Router                | 1        | Inter-VLAN Routing and External Connectivity |
+| Core Switch (Layer 3) | 1        | Network Backbone and Traffic Distribution    |
+| Access Switch         | 4        | Department-Level Network Access              |
+
+## VLAN Segmentation
+
+The network is divided into four logical departments to improve security, performance, and administrative control.
+
+### IT Department
+
+A secure network segment dedicated to:
+
+* Network administrators
+* IT support personnel
+* Infrastructure management systems
+
+### Accounting Department
+
+An isolated segment designed for:
+
+* Financial operations
+* Accounting systems
+* Sensitive business data
+
+### Marketing Department
+
+A standard corporate segment supporting:
+
+* Marketing teams
+* Business applications
+* Departmental workstations
+
+### Guest Network
+
+A restricted network designed for:
+
+* Visitors and temporary users
+* Internet access only
+* Limited access to internal resources
+
+## Implemented Features
+
+### VLAN Configuration
+
+* Logical separation of departments
+* Improved security and traffic management
+* Reduced broadcast domains
+
+### Inter-VLAN Routing
+
+* Communication between VLANs
+* Controlled access between departments
+* Layer 3 routing implementation
+
+### Switch Configuration
+
+* VLAN assignment
+* Port configuration
+* Trunk configuration
+
+### Router Configuration
+
+* VLAN gateway management
+* Routing functionality
+* Network connectivity services
+
+## Network Design Objectives
+
+The project was designed to achieve the following goals:
+
+* Improve network security through segmentation
+* Reduce unnecessary broadcast traffic
+* Support scalable infrastructure growth
+* Enable efficient traffic management
+* Demonstrate enterprise networking best practices
+
+## Project Structure
+
+```text
+local-area-network-basic/
+│
+├── LAN_Topology.pkt
+├── Network_Diagram.png
+└── README.md
+```
+
+## Learning Outcomes
+
+This project demonstrates practical experience in:
+
+* Enterprise Network Design
+* VLAN Deployment
+* Inter-VLAN Routing
+* Cisco Networking Fundamentals
+* Layer 2 and Layer 3 Switching
+* Traffic Segmentation
+* Network Security Principles
+* Infrastructure Planning
+
+## Use Cases
+
+The architecture presented in this project can be adapted for:
+
+* Small and Medium-Sized Businesses (SMBs)
+* Educational Institutions
+* Corporate Office Environments
+* Training and Laboratory Networks
+* Network Engineering Learning Projects
+
+## Future Improvements
+
+Potential enhancements include:
+
+* Dynamic Routing Protocols (OSPF, EIGRP)
+* Access Control Lists (ACLs)
+* DHCP Services
+* Network Address Translation (NAT)
+* Redundant Core Infrastructure
+* Wireless Network Integration
+* Network Monitoring and Logging
+* Firewall Deployment
+* VPN Connectivity
+
+## License
+
+This project is provided for educational, laboratory, and portfolio purposes.
+
+## Author
+
+Developed as a practical network engineering project focused on enterprise LAN design, VLAN implementation, network segmentation, and Cisco networking technologies.
